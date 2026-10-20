@@ -1,9 +1,10 @@
+FILES = "{src,features}/**/*.{js,jsx,json,css,md}" "index.html"
 FORMATTER = npx prettier
 
 .PHONY: format lint
 
 format:
-	$(FORMATTER) --write "src/**/*.{js,jsx,json,css,md}" "index.html"
+	$(FORMATTER) --write $(FILES)
 
 lint:
-	$(FORMATTER) --check "src/**/*.{js,jsx,json,css,md}" "index.html"
+	$(FORMATTER) --check $(FILES)
